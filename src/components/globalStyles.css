@@ -134,6 +134,12 @@ blockquote {
   right: 0;
   bottom: 0;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .taCenter {
   text-align: center;
 }

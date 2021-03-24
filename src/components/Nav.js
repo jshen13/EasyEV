@@ -39,7 +39,7 @@ export class Navigation extends Component {
   }
   render() {
     const { active } = this.state,
-      { subNav } = this.props,
+      // { subNav } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
