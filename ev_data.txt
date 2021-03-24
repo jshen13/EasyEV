@@ -2,9 +2,8 @@
 	cars:
 	[
 		{make: "Tesla", model: "Model 3 Standard Range Plus", price: 37490, range: 263, acceleration: 5.3, top_speed: 140, image: "./images/model_3.png"},
-		{make: "Tesla", model: "Model 3 Long Range", price: 46490, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_3.png"},
+		{make: "Tesla", model: "Model 3 Long Range", price: 46990, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_3.png"},
 		{make: "Tesla", model: "Tesla Model 3 Performance", price: 55990, range: 315, acceleration: 3.1, top_speed: 162, image: "./images/model_3.png"},
-		{make: "Tesla", model: "Tesla Model 3 Long Range", price: 38690, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_3.png"},
 		{make: "Tesla", model: "Tesla Model Y Long Range", price: 49990, range: 326, acceleration: 4.8, top_speed: 135, image: "./images/model_y.png"},
 		{make: "Tesla", model: "Tesla Model Y Performance", price: 60990, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_y.png"},
 		{make: "Tesla", model: "Tesla Model S Long Range", price: 79990, range: 412, acceleration: 3.1, top_speed: 155, image: "./images/model_s.jpeg"},

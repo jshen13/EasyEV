@@ -67,6 +67,7 @@ export const ExplorePage = ({
             title={title}
             subtitle={subtitle}
             backgroundImage={featuredImage}
+
           />
 
           {!!postCategories.length && (
@@ -137,7 +138,7 @@ export const pageQuery = graphql`
     }
 
     posts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts" } } }
+      filter: { fields: { contentType: { eq: "cars" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -149,6 +150,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
+            price
+            range
+            acceleration
+            top_speed
             categories {
               category
             }
@@ -158,7 +163,7 @@ export const pageQuery = graphql`
       }
     }
     postCategories: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "postCategories" } } }
+      filter: { fields: { contentType: { eq: "carCompanies" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {

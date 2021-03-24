@@ -8,6 +8,10 @@ const PostCard = ({
   featuredImage,
   title,
   excerpt,
+  price,
+  range,
+  acceleration,
+  top_speed,
   slug,
   categories = [],
   className = '',
@@ -24,7 +28,11 @@ const PostCard = ({
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
+      {price && <div className="PostCard--Price">${price}</div>}
+      {range && <div className="PostCard--Range">{range} mi</div>}
+      {acceleration && <div className="PostCard--Range">{acceleration} secs</div>}
+      {top_speed && <div className="PostCard--Range">{top_speed} mph</div>}
+      {/* {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>} */}
     </div>
   </Link>
 )
