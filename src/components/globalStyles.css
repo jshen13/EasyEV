@@ -232,3 +232,11 @@ blockquote {
   align-items: center;
   justify-content: center;
 }
+
+/* Dividers */
+
+.Divider {
+  width:30px;
+  height:auto;
+  display:inline-block;
+}
