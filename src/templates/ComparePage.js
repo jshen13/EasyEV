@@ -9,8 +9,11 @@ import BackgroundVideo from '../components/BackgroundVideo'
 import Gallery from '../components/Gallery'
 import Popup from '../components/Popup'
 
+import CompareComp from '../components/CompareComp'
+
+
 // Export Template for use in CMS preview
-export const ComparePageTemplate = ({
+export const ComponentsPageTemplate = ({
   title,
   subtitle,
   featuredImage,
@@ -35,6 +38,37 @@ export const ComparePageTemplate = ({
       </div>
     </section>
 
+    
+    {/* <Dropdown>
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+    Dropdown Button
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+    </Dropdown> */}
+
+    <CompareComp />
+
+<label className='Form--Label has-arrow'>
+      <select
+        className='Form--Input Form--Select'
+        name='type'
+        defaultValue='Type of Enquiry'
+        required
+      >
+        <option disabled hidden>
+          Type of Enquiry
+        </option>
+        <option>Need to know more</option>
+        <option>Found a bug</option>
+        <option>Want to say hello</option>
+      </select>
+    </label>
+    
     <section className="section">
       <div className="container">
         <h2>Our gallery component</h2>
@@ -70,22 +104,21 @@ export const ComparePageTemplate = ({
   </main>
 )
 
-const ComparePage = ({ data: { page } }) => (
+const ComponentsPage = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <ComparePageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ComponentsPageTemplate {...page} {...page.frontmatter} body={page.html} />
   </Layout>
 )
 
-export default ComparePage
+export default ComponentsPage
 
 export const pageQuery = graphql`
-  query ComparePage($id: String!) {
+  query ComponentsPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
-      
       ...Gallery
       html
       frontmatter {

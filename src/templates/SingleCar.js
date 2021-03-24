@@ -73,7 +73,7 @@ export const SingleCarTemplate = ({
             <br></br>
             Range: {range} miles
             <br />
-            Acceleration: {acceleration} seconds
+            0-60 mph Acceleration: {acceleration} seconds
             <br />
             Top Speed: {top_speed} mph
           </div>
