@@ -1,22 +1,22 @@
 ---
 template: SingleCar
-title: Tesla Model 3 Performance
+title: Jaguar I-Pace
 status: Published
-date: '2018-08-25'
-price: 55990
-range: 315
-acceleration: 3.1
-top_speed: 162
+date: '2018-06-22'
+price: 71000
+range: 234
+acceleration: 4.5
+top_speed: 124
 featuredImage: >-
-  https://tesla-cdn.thron.com/delivery/public/image/tesla/c82315a6-ac99-464a-a753-c26bc0fb647d/bvlatuR/std/1200x628/lhd-model-3-social
-link: https://www.tesla.com/model3
+  https://cdn.motor1.com/images/mgl/qvVZR/s1/jaguar-i-pace-lo-show-di-presentazione-dalle-19-del-1-marzo.jpg
+link: https://www.jaguar.com/jaguar-range/i-pace/index.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Jaguar
 meta:
   description: test meta description
   title: test meta title

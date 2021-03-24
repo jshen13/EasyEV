@@ -1,22 +1,22 @@
 ---
 template: SingleCar
-title: Tesla Model 3 Performance
+title: Audi e-tron Sportback
 status: Published
-date: '2018-08-25'
-price: 55990
-range: 315
-acceleration: 3.1
-top_speed: 162
+date: '2018-06-22'
+price: 69100
+range: 222
+acceleration: 5.1
+top_speed: 118
 featuredImage: >-
-  https://tesla-cdn.thron.com/delivery/public/image/tesla/c82315a6-ac99-464a-a753-c26bc0fb647d/bvlatuR/std/1200x628/lhd-model-3-social
-link: https://www.tesla.com/model3
+  https://media.ed.edmunds-media.com/audi/e-tron/2021/oem/2021_audi_e-tron_4dr-suv_prestige-quattro_fq_oem_2_1600.jpg
+link: https://www.audiusa.com/us/web/en/models/e-tron/e-tron/2021/overview.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Audi
 meta:
   description: test meta description
   title: test meta title

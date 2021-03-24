@@ -28,10 +28,10 @@ const PostCard = ({
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {price && <div className="PostCard--Price">${price}</div>}
-      {range && <div className="PostCard--Range">{range} mi</div>}
-      {acceleration && <div className="PostCard--Range">{acceleration} secs</div>}
-      {top_speed && <div className="PostCard--Range">{top_speed} mph</div>}
+      {price && <div className="PostCard--Price">${Number(price).toLocaleString()}</div>}
+      {range && <div className="PostCard--Range">{range} mi range</div>}
+      {acceleration && <div className="PostCard--Range">{acceleration} s acceleration</div>}
+      {top_speed && <div className="PostCard--Range">{top_speed} mph top speed</div>}
       {/* {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>} */}
     </div>
   </Link>

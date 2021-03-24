@@ -8,7 +8,8 @@ range: 326
 acceleration: 4.8
 top_speed: 135
 featuredImage: >-
-  https://www.tesla.com/sites/default/files/modelsx-new/social/model-y-social.png
+  https://www.tesla.com/assets/img/my_fb_s.jpg
+link: https://www.tesla.com/modely
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the

@@ -1,15 +1,15 @@
 ---
 template: SingleCar
-title: Tesla Model 3 Performance
+title: Tesla Model S Plaid
 status: Published
-date: '2018-08-25'
-price: 55990
-range: 315
-acceleration: 3.1
-top_speed: 162
+date: '2018-05-25'
+price: 119990
+range: 390
+acceleration: 1.99
+top_speed: 200
 featuredImage: >-
-  https://tesla-cdn.thron.com/delivery/public/image/tesla/c82315a6-ac99-464a-a753-c26bc0fb647d/bvlatuR/std/1200x628/lhd-model-3-social
-link: https://www.tesla.com/model3
+  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
+link: https://www.tesla.com/models
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the

@@ -2,13 +2,14 @@
 template: SingleCar
 title: Tesla Model Y Performance
 status: Published
-date: '2018-05-25'
+date: '2018-06-23'
 price: 60990
 range: 353
 acceleration: 4.2
 top_speed: 145
 featuredImage: >-
-  https://www.tesla.com/sites/default/files/modelsx-new/social/model-y-social.png
+  https://www.tesla.com/assets/img/my_fb_s.jpg
+link: https://www.tesla.com/modely
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the

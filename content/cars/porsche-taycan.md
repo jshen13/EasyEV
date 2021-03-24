@@ -1,22 +1,22 @@
 ---
 template: SingleCar
-title: Tesla Model 3 Performance
+title: Porsche Taycan 4S
 status: Published
-date: '2018-08-25'
-price: 55990
-range: 315
-acceleration: 3.1
-top_speed: 162
+date: '2018-06-24'
+price: 105150
+range: 227
+acceleration: 3.8
+top_speed: 155
 featuredImage: >-
-  https://tesla-cdn.thron.com/delivery/public/image/tesla/c82315a6-ac99-464a-a753-c26bc0fb647d/bvlatuR/std/1200x628/lhd-model-3-social
-link: https://www.tesla.com/model3
+  https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2019/12/s19_6481_fine.jpg?quality=100&strip=all
+link: https://www.porsche.com/usa/models/taycan/taycan-models/taycan-4s/
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Porsche
 meta:
   description: test meta description
   title: test meta title

@@ -63,12 +63,12 @@ export const ExplorePage = ({
 
       return (
         <main className="Blog">
-          <PageHeader
+          {/* <PageHeader
             title={title}
             subtitle={subtitle}
             backgroundImage={featuredImage}
 
-          />
+          /> */}
 
           {!!postCategories.length && (
             <section className="section thin">
