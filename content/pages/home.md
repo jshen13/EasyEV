@@ -7,5 +7,5 @@ subtitle: EV's made easy!
 accordion: []
 meta:
   description: ""
-  title: EasyEV
+  title: Home
 ---
