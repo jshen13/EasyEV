@@ -1,0 +1,28 @@
+{
+	cars:
+	[
+		{make: "Tesla", model: "Model 3 Standard Range Plus", price: 37490, range: 263, acceleration: 5.3, top_speed: 140, image: "./images/model_3.png"},
+		{make: "Tesla", model: "Model 3 Long Range", price: 46490, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_3.png"},
+		{make: "Tesla", model: "Tesla Model 3 Performance", price: 55990, range: 315, acceleration: 3.1, top_speed: 162, image: "./images/model_3.png"},
+		{make: "Tesla", model: "Tesla Model 3 Long Range", price: 38690, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_3.png"},
+		{make: "Tesla", model: "Tesla Model Y Long Range", price: 49990, range: 326, acceleration: 4.8, top_speed: 135, image: "./images/model_y.png"},
+		{make: "Tesla", model: "Tesla Model Y Performance", price: 60990, range: 353, acceleration: 4.2, top_speed: 145, image: "./images/model_y.png"},
+		{make: "Tesla", model: "Tesla Model S Long Range", price: 79990, range: 412, acceleration: 3.1, top_speed: 155, image: "./images/model_s.jpeg"},
+		{make: "Tesla", model: "Tesla Model S Plaid", price: 119990, range: 390, acceleration: 1.99, top_speed: 200, image: "./images/model_s.jpeg"},
+		{make: "Tesla", model: "Tesla Model S Plaid+, price: 149990, range: 520, acceleration: 1.99, top_speed: 200, image: "./images/model_s.jpeg"},
+		{make: "Tesla", model: "Tesla Model X Long Range", price: 89990, range: 360, acceleration: 3.8, top_speed: 155, image: "./images/model_x.jpeg"},
+		{make: "Tesla", model: "Tesla Model X Plaid", price: 119990, range: 340, acceleration: 2.5, top_speed: 340, image: "./images/model_x.jpeg"}
+		{make: "Jaguar", model: "Jaguar I-Pace", price: 71000, range: 234, acceleration: 4.5, top_speed: 124, image: "./images/ipace.jpeg"}
+		{make: "Audi", model: "Audi e-tron Sportback", price: 69100, range: 222, acceleration: 5.1, top_speed: 118, image: "./images/etron_sportback.png"}
+		{make: "Audi", model: "Audi e-tron", price: 66995, range: 222, acceleration: 5.5, top_speed: 124, image: "./images/etron.jpeg"}
+		{make: "Porsche", model: "Porsche Taycan 4S", price: 105150, range: 227, acceleration: 3.8, top_speed: 155, image: "./images/taycan.jpeg"}
+		{make: "Volvo", model: "Volvo XC40 Recharge", price: 55085, range: 208, acceleration: 4.7, top_speed: 143, image: "./images/xc40.jpeg"}
+		{make: "", model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+		{model: "", price: , range: , acceleration: , top_speed: , image: "./images/"}
+	]
+}
