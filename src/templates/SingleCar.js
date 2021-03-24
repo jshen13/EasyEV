@@ -80,7 +80,7 @@ export const SingleCarTemplate = ({
           
           {link && <div className="SinglePost--InnerContent">
           
-            Learn more at <Link to={"https://www.tesla.com/model3"} target="__blank">{link}</Link>
+            Learn more at <Link to={link} target="__blank">{link}</Link>
             {/* <Content source={body} /> */}
           </div>}
 

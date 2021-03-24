@@ -1,12 +1,12 @@
 ---
 template: SingleCar
-title: Audi e-tron Sportback
+title: Audi e-tron
 status: Published
 date: '2018-06-22'
-price: 69100
+price: 69995
 range: 222
-acceleration: 5.1
-top_speed: 118
+acceleration: 5.5
+top_speed: 124
 featuredImage: >-
   https://media.ed.edmunds-media.com/audi/e-tron/2021/oem/2021_audi_e-tron_4dr-suv_prestige-quattro_fq_oem_2_1600.jpg
 link: https://www.audiusa.com/us/web/en/models/e-tron/e-tron/2021/overview.html
