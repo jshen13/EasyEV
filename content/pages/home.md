@@ -2,8 +2,8 @@
 template: HomePage
 slug: ""
 title: EasyEV
-featuredImage: https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/
-subtitle: " Welcome to the ultimate Gatsby and Netlify starter project."
+featuredImage: https://ucarecdn.com/40c0db3f-9d78-40f2-b345-225e1660d519/
+subtitle: EV's made easy!
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter
