@@ -4,9 +4,10 @@ slug: ""
 title: EasyEV
 featuredImage: https://ucarecdn.com/40c0db3f-9d78-40f2-b345-225e1660d519/
 subtitle: EV's made easy!
+accordion: []
 meta:
-  description: This is a meta description.
-  title: The Ultimate Gatsby Starter
+  description: ""
+  title: EasyEV
 ---
 
 Yellowcake is an opinionated starter project created by [Thrive Digital](https://thriveweb.com.au/) a [Gold Coast Web Design](https://thriveweb.com.au/) studio. to help you create lightning fast websites with [Gatsby](https://gatsbyjs.org) and [Netlify CMS](https://netlifycms.org).
