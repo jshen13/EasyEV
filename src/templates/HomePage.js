@@ -16,8 +16,36 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
     />
 
     <section className="section">
+      <style>
+        .button {'{'}
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        {'}'}
+
+        .button1 {'{'}
+          background-color: white; 
+          color: black; 
+          border: 2px solid #66ff99;
+        {'}'}
+
+        .button1:hover {'{'}
+          background-color: #66ff99;
+          color: white;
+        {'}'}
+
+      </style>
       <div className="container">
         <Content source={body} />
+        <button class="button button1">Buy</button>
+        <button class="button button1">Learn More</button>
       </div>
     </section>
   </main>
