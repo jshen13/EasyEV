@@ -6,32 +6,43 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import NewsPostCard from '../components/NewsPostCard'
 import PostCard from '../components/PostCard'
+import StockCard from '../components/StockCard'
 import _ from 'lodash'
 
 export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
+  const [stockData, setStockData] = useState({});
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
-    getNews();
+    getNews(); getStocks();
   }, []);
 
   const getNews = async() => {
     const response = await fetch('https://newsapi.org/v2/everything?q=electric%20vehicles&apiKey=81335da982204a83b4416040fad0f2db');
     if (response.status !== 200) {
-      console.log('Error. Status Code: ' + response.status);
       return
     }
     const jsonData = await response.json();
     setUserData(jsonData);
-        
-      
-    
+  }
+
+  const getStocks = async() => {
+    const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=SKL5BI6O6I4Z7YQW')
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    // console.log(jsonData);
+    setStockData(jsonData);
   }
 
   return <React.Fragment>
   {userData.articles && userData.articles.map(article => {
       return <NewsPostCard key={article.title} {...article}/>
-   })}
+   || stockData.articles && stockData.articles.map(article => {
+     return <StockCard key={article.company} {...article}/>
+   })})}
   </React.Fragment>
 
 }
