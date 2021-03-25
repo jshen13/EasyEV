@@ -40,25 +40,6 @@ export const ComponentsPageTemplate = ({
       </div>
     </section>
 
- 
-
-    
-
-<label className='Form--Label has-arrow'>
-      <select
-        className='Form--Input Form--Select'
-        name='type'
-        defaultValue='Type of Enquiry'
-        required
-      >
-        <option disabled hidden>
-          Type of Enquiry
-        </option>
-        <option>Need to know more</option>
-        <option>Found a bug</option>
-        <option>Want to say hello</option>
-      </select>
-    </label>
     
     {/* <section className="section">
       <div className="container">
@@ -79,7 +60,7 @@ export const ComponentsPageTemplate = ({
       </BackgroundVideo>
     </section> */}
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Accordion items={accordion} />
       </div>
@@ -91,7 +72,7 @@ export const ComponentsPageTemplate = ({
           <Content source={section1} />
         </Popup>
       </div>
-    </section>
+    </section> */}
   </main>
 )
 

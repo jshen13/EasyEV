@@ -2,8 +2,8 @@
 template: ComparePage
 slug: compare
 title: Compare EVs
-featuredImage: https://ucarecdn.com/df0dc650-6938-412f-aefb-2019d2349e13/
-subtitle: This is the components page subtitle.
+featuredImage: https://www.motortrend.com/uploads/sites/5/2020/05/2020-Tesla-Model-Y-vs-Model-3-2.jpg
+subtitle: Compare the specifications of two cars side by side!
 section1: >-
   ## This is a container component
 

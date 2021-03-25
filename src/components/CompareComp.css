@@ -1,11 +1,43 @@
+.OneCar {
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--lightGrey);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .OneCar:hover,
+  .OneCar:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  }
+
 .CarCompare {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: stretch;
-    
+    margin: 0px;
+    padding: 0px;
   }
 
 .OneCar {
-    flex: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+    padding: 0px;
+    flex: 45%;
+}
+
+.SelectionContainer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Dropdown {
+    display: 45%;
+    margin: 5px;
 }

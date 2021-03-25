@@ -1,7 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import PostCard from './PostCard';
+import PostCardCompare from './PostCardCompare';
+import './Form.css'
+
 import './CompareComp.css'
+import './PostCard.css'
 
 export class CompareComp extends React.Component {
     constructor(props) {
@@ -37,42 +41,63 @@ export class CompareComp extends React.Component {
         let carsTitleList = this.props.cars.length > 0
     	&& this.props.cars.map((item, i) => {
       return (
-        <option key={i} value={item.id}>{item.title}</option>
+        <option >{item.title}</option>
       )
     }, this);
 
         return (
             <React.Fragment>
-        <form onSubmit={this.handleSubmit}>
-        <label>
-            Pick car1:
-            <select value={this.state.car1} onChange={this.handleCar1Change}>
+        
+        <h3>Choose cars to compare</h3>
+        <div className="SelectionContainer">
+        <div className="Dropdown">
+                    
+        <label className="Form--Label has-arrow">
+                            
+        <select
+            // value={this.state.car1}
+            
+            onChange={this.handleCar1Change}
+            className="Form--Input Form--Select"                    
+            defaultValue="Choose a Car"
+                                name="type"
+                                placeholder="test"
+            required>
+            <option disabled hidden>Choose a Car</option>
                 {carsTitleList}
             </select>
-          </label>
+            </label>
+        </div>
+                        
           {/* <input type="submit" value="Submit" /> */}
-          </form>
           
 
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Pick car2:
-            <select value={this.state.car2} onChange={this.handleCar2Change}>
+          <div className="Dropdown">
+          <label className="Form--Label has-arrow">
+                            <select
+                                defaultValue="Choose a Car"
+                                // value={this.state.car2} 
+                                onChange={this.handleCar2Change} 
+                                className="Form--Input Form--Select" name="type">
+            <option disabled hidden>
+                Choose a Car
+              </option>
                 {carsTitleList}
             </select>
-          </label>
+        </label>
+        </div>
           {/* <input type="submit" value="Submit" /> */}
-        </form>
                 
-        <h2>Car1: {this.state.car1}</h2>
-        <h2>Car2: {this.state.car2}</h2>
+        </div>
+        {/* <h2>Car1: {this.state.car1}</h2>
+        <h2>Car2: {this.state.car2}</h2> */}
 
         <div className="CarCompare">
             <div className="OneCar">
-            <PostCard {...this.getCarFromTitle(this.state.car1)}/>
+            <PostCardCompare car1={this.getCarFromTitle(this.state.car1)}  car2={this.getCarFromTitle(this.state.car2)}/>
             </div>
             <div className="OneCar">
-            <PostCard {...this.getCarFromTitle(this.state.car2)}/>
+            <PostCardCompare car1={this.getCarFromTitle(this.state.car2)} car2={this.getCarFromTitle(this.state.car1)}/>
             </div>
 
         </div>

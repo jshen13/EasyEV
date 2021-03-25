@@ -18,6 +18,7 @@ const PostCard = ({
   ...props
 }) => (
   <Link to={slug} className={`PostCard ${className}`}>
+    
     {featuredImage && (
       <div className="PostCard--Image relative">
         <Image background src={featuredImage} alt={title} />
