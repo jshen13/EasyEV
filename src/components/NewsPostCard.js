@@ -5,33 +5,33 @@ import Image from './Image'
 import './PostCard.css'
 
 const NewsPostCard = ({
-  featuredImage,
+  urlToImage,
   title,
   author,
   url,
   description,
-  date,
+  publishedAt,
   categories = [],
   className = '',
   ...props
 }) => (
-  <a href={url}>
-    featuredImage && (
+  <Link to={url} className="PostCard">
+    {urlToImage && (
       <div className="PostCard--Image relative">
-        <Image background src={featuredImage} alt={title} />
+        <Image background src={urlToImage} alt={title} />
       </div>
-    )
+    )}
     <div className="PostCard--Content">
       {title && <h3 className="PostCard--Title">{title}</h3>}
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {author && <div className="PostCard--Date">${author}</div>}
-      {date && <div className="PostCard--Date">${date}</div>}
-      {description && <div className="PostCard--Date">${author}</div>}
-      {/* {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>} */}
+      {author && <div className="PostCard--Author">{author}</div>}
+      {publishedAt && <div className="PostCard--Date">{publishedAt}</div>}
+      {/* {description && <div className="PostCard--Date">${author}</div>} */}
+      {description && <div className="PostCard--Excerpt">{description }</div>}
     </div>
-  </a>
+  </Link>
 )
 
 export default NewsPostCard
