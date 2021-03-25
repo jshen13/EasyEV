@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PostCard from './PostCard';
+import './CompareComp.css'
 
 export class CompareComp extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {car1: 'Something', car2: ''};
-        // this.cars = cars.edges.map(car => ({
-        //     ...car.node
-        // }));
+        this.state = {car1: '', car2: ''};
         this.handleCar1Change = this.handleCar1Change.bind(this);
         this.handleCar2Change = this.handleCar2Change.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,36 +25,58 @@ export class CompareComp extends React.Component {
       event.preventDefault();
     }
   
+    getCarFromTitle(carTitle) {
+        for (var i = 0; i < this.props.cars.length; i++) {
+            if (carTitle == this.props.cars[i].title) {
+                return this.props.cars[i];
+            }
+        }
+        return;
+    }
     render() {
+        let carsTitleList = this.props.cars.length > 0
+    	&& this.props.cars.map((item, i) => {
+      return (
+        <option key={i} value={item.id}>{item.title}</option>
+      )
+    }, this);
+
         return (
             <React.Fragment>
-                
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Pick your favorite flavor:
+        <label>
+            Pick car1:
             <select value={this.state.car1} onChange={this.handleCar1Change}>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="lime">Lime</option>
-              <option value="coconut">Coconut</option>
-              <option value="mango">Mango</option>
+                {carsTitleList}
             </select>
           </label>
-          <input type="submit" value="Submit" />
+          {/* <input type="submit" value="Submit" /> */}
           </form>
           
 
-          <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <label>
-            Pick your favorite flavor:
+            Pick car2:
             <select value={this.state.car2} onChange={this.handleCar2Change}>
-              <option value="grapefruit">Grapefruit</option>
-              <option value="lime">Lime</option>
-              <option value="coconut">Coconut</option>
-              <option value="mango">Mango</option>
+                {carsTitleList}
             </select>
           </label>
-          <input type="submit" value="Submit" />
+          {/* <input type="submit" value="Submit" /> */}
         </form>
+                
+        <h2>Car1: {this.state.car1}</h2>
+        <h2>Car2: {this.state.car2}</h2>
+
+        <div className="CarCompare">
+            <div className="OneCar">
+            <PostCard {...this.getCarFromTitle(this.state.car1)}/>
+            </div>
+            <div className="OneCar">
+            <PostCard {...this.getCarFromTitle(this.state.car2)}/>
+            </div>
+
+        </div>
+                
       </React.Fragment>
                 
       );
@@ -65,68 +86,40 @@ export class CompareComp extends React.Component {
 export default CompareComp;
 
 
-// export const pageQuery = graphql`
-//   ## Query for BlogIndex data
-//   ## Use GraphiQL interface (http://localhost:8000/___graphql)
-//   ## $id is processed via gatsby-node.js
-//   ## query name must be unique to this file
-//   query Compare($id: String!) {
-//     page: markdownRemark(id: { eq: $id }) {
-//       ...Meta
-//       fields {
-//         contentType
-//       }
-//       frontmatter {
-//         title
-//         excerpt
-//         template
-//         subtitle
-//         featuredImage
-//       }
-//     }
+export const pageQuery = graphql`
+  ## Query for BlogIndex data
+  ## Use GraphiQL interface (http://localhost:8000/___graphql)
+  ## $id is processed via gatsby-node.js
+  ## query name must be unique to this file
+  query Compare {
 
-//     posts: allMarkdownRemark(
-//       filter: { fields: { contentType: { eq: "cars" } } }
-//       sort: { order: DESC, fields: [frontmatter___date] }
-//     ) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             date
-//             price
-//             range
-//             acceleration
-//             top_speed
-//             categories {
-//               category
-//             }
-//             featuredImage
-//           }
-//         }
-//       }
-//     }
-//     postCategories: allMarkdownRemark(
-//       filter: { fields: { contentType: { eq: "carCompanies" } } }
-//       sort: { order: ASC, fields: [frontmatter___title] }
-//     ) {
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+    posts: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "cars" } } }
+      sort: { order: DESC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            price
+            range
+            acceleration
+            top_speed
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
+      }
+    }
+}
+`
 // export const carQuery = graphql`
 //   ## Query for BlogIndex data
 //   ## Use GraphiQL interface (http://localhost:8000/___graphql)
@@ -135,7 +128,7 @@ export default CompareComp;
 //   query Compare($id: String!) {
 //     posts: allMarkdownRemark(
 //       filter: { fields: { contentType: { eq: "cars" } } }
-//       sort: { order: DESC, fields: [frontmatter___date] }
+//       sort: { order: DESC, fields: [frontmatter___title] }
 //     ) {
 //       edges {
 //         node {

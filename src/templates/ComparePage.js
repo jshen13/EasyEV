@@ -24,7 +24,8 @@ export const ComponentsPageTemplate = ({
   videoTitle,
   accordion,
   body,
-  gallery
+  gallery,
+  cars = []
 }) => (
   <main>
     <PageHeader
@@ -34,24 +35,14 @@ export const ComponentsPageTemplate = ({
     />
     <section className="section">
       <div className="container">
-        <Content source={section1} />
+        {/* <Content source={section1} /> */}
+        <CompareComp cars={cars}/>
       </div>
     </section>
 
+ 
+
     
-    {/* <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-    </Dropdown> */}
-
-    <CompareComp />
 
 <label className='Form--Label has-arrow'>
       <select
@@ -69,24 +60,24 @@ export const ComponentsPageTemplate = ({
       </select>
     </label>
     
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <h2>Our gallery component</h2>
         <Gallery images={gallery} />
       </div>
-    </section>
+    </section> */}
 
-    <section className="section">
+    {/* <section className="section">
       <div className="container">
         <Content source={section2} />
       </div>
-    </section>
+    </section> */}
 
-    <section className="BackgroundVideo-section section">
+    {/* <section className="BackgroundVideo-section section">
       <BackgroundVideo poster={videoPoster} videoTitle={videoTitle}>
         {video && <source src={video} type="video/mp4" />}
       </BackgroundVideo>
-    </section>
+    </section> */}
 
     <section className="section">
       <div className="container">
@@ -104,12 +95,16 @@ export const ComponentsPageTemplate = ({
   </main>
 )
 
-const ComponentsPage = ({ data: { page } }) => (
+const ComponentsPage = ({ data: { page, cars } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
   >
-    <ComponentsPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ComponentsPageTemplate {...page} {...page.frontmatter} cars={cars.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))} body={page.html} />
   </Layout>
 )
 
@@ -137,5 +132,31 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
+    cars: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "cars" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            price
+            range
+            acceleration
+            top_speed
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
+      }
+    }
+}
 `
+

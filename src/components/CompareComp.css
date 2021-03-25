@@ -1,0 +1,11 @@
+.CarCompare {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+  }
+
+.OneCar {
+    flex: 50%;
+}
