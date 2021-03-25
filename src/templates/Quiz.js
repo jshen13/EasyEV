@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import FormQuiz from '../components/FormQuiz'
 
 // Export Template for use in CMS preview
-export const QuizPageTemplate = ({ title, subtitle, featuredImage, body }) => (
+export const QuizPageTemplate = ({ title, subtitle, featuredImage, body , cars}) => (
   <main className="Quiz">
     <PageHeader
       large
@@ -17,16 +17,20 @@ export const QuizPageTemplate = ({ title, subtitle, featuredImage, body }) => (
     />
     <div>
       <center>
-        <FormQuiz/>
+        <FormQuiz cars={cars}/>
       </center>
     </div>
   </main>
 )
 
 // Export Default QuizPage for front-end
-const QuizPage = ({ data: { page } }) => (
+const QuizPage = ({ data: { page, cars } }) => (
   <Layout meta={page.frontmatter.meta || false}>
-    <QuizPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <QuizPageTemplate {...page} {...page.frontmatter} body={page.html} cars={cars.edges.map(post => ({
+        ...post.node,
+        ...post.node.frontmatter,
+        ...post.node.fields
+      }))}/>
   </Layout>
 )
 
@@ -52,6 +56,31 @@ export const pageQuery = graphql`
           category
         }
         featuredImage
+      }
+    }
+    cars: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "cars" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            price
+            range
+            acceleration
+            top_speed
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
       }
     }
   }
