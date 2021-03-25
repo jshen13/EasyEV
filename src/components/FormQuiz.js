@@ -33,7 +33,7 @@ export default ({
             </select>
         </label>
 
-        <div class="Divider"/>
+        <div className="Divider"/>
 
         <h3>How would you describe your commute?</h3>
         <label className="Form--Label has-arrow">
@@ -52,7 +52,7 @@ export default ({
             </select>
         </label>
 
-        <div class="Divider"/>
+        <div className="Divider"/>
 
         <h3>How adventurous are you on the accelerator?</h3>
         <label className="Form--Label has-arrow">

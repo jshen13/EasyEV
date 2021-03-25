@@ -43,7 +43,14 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
+        date
+        price
+        range
+        acceleration
+        top_speed
+        categories {
+          category
+        }
         featuredImage
       }
     }
