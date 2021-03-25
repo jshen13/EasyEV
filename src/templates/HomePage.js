@@ -21,15 +21,15 @@ export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
         <Content source={body} />
           <center>
             <a href="/quiz">
-              <div class="Button" tabindex="0" aria-label="Toggle Popup" role="button">Take a Preference Quiz</div>
+              <div className="Button" tabindex="0" aria-label="Toggle Popup" role="button">Take a Preference Quiz</div>
             </a>
-            <div class="Divider"/>
+            <div className="Divider"/>
             <a href="/news">
-            <div class="Button" tabindex="0" aria-label="Toggle Popup" role="button">Learn More about Electric Vehicles</div>
+            <div className="Button" tabindex="0" aria-label="Toggle Popup" role="button">Learn More about Electric Vehicles</div>
             </a>
           </center>
       </div>
-      <div class="Divider"/>
+      <div className="Divider"/>
       <div className="container">
         <h1>Why Purchase an Electric Vehicle?</h1>
         <h3>Electric Vehicles will be the future of transportation.</h3>
