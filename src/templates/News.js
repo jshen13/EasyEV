@@ -23,7 +23,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   }, []);
 
   const getNews = async() => {
-    const response = await fetch('https://newsapi.org/v2/everything?q=electric%20vehicles&apiKey=81335da982204a83b4416040fad0f2db');
+    const response = await fetch('https://newsapi.org/v2/everything?q=electric%20vehicles&apiKey=81335da982204a83b4416040fad0f2db', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
     if (response.status !== 200) {
       console.log(jsonData)
       return
