@@ -19,7 +19,7 @@ categories:
   - category: Jaguar
 meta:
   description: test meta description
-  title: test meta title
+  title: Jaguar I-Pace
 
 
 ---

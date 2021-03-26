@@ -19,7 +19,7 @@ categories:
   - category: Volvo
 meta:
   description: test meta description
-  title: test meta title
+  title: Volvo XC40 Recharge
 
 
 ---

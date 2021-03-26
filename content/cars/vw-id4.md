@@ -19,7 +19,7 @@ categories:
   - category: Volkswagen
 meta:
   description: test meta description
-  title: test meta title
+  title: Volkswagen ID.4
 
 
 ---

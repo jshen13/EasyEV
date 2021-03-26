@@ -29,6 +29,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
     }
     const jsonData = await response.json();
     setUserData(jsonData);
+    console.log(jsonData)
   }
 
   const getBlkStock = async() => {
@@ -111,7 +112,8 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
       </div>
     </div>
     {userData.articles && userData.articles.map(article => {
-      return <NewsPostCard key={article.title} {...article}/>})}, 
+      return <NewsPostCard key={article.title} {...article}/>})}
+    {!userData.articles && <p>Loading...</p>}
   </React.Fragment>
 
 }

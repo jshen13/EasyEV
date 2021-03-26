@@ -19,7 +19,7 @@ categories:
   - category: Ford
 meta:
   description: test meta description
-  title: test meta title
+  title: Ford Mustang Mach-E
 
 
 ---

@@ -19,7 +19,7 @@ categories:
   - category: Polestar
 meta:
   description: test meta description
-  title: test meta title
+  title: Polestar 2
 
 
 ---

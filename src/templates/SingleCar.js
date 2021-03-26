@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
@@ -7,6 +7,16 @@ import Image from '../components/Image'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SingleCar.css'
+
+var news;
+
+const getNews = async(title) => {
+  const response = await fetch('https://newsapi.org/v2/everything?q=' + title +'s&apiKey=81335da982204a83b4416040fad0f2db');
+  if (response.status !== 200) {
+    return
+  }
+  news = await response.json();
+}
 
 export const SingleCarTemplate = ({
   title,
@@ -76,6 +86,10 @@ export const SingleCarTemplate = ({
             0-60 mph Acceleration: {acceleration} seconds
             <br />
             Top Speed: {top_speed} mph
+            <br/>
+            {/* {getNews(title)}
+            console.log(news)
+            News: {news['articles']['0']['url']} */}
           </div>
           
           {link && <div className="SinglePost--InnerContent">

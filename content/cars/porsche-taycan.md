@@ -19,7 +19,7 @@ categories:
   - category: Porsche
 meta:
   description: test meta description
-  title: test meta title
+  title: Porsche Taycan 4S
 
 
 ---
