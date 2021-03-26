@@ -12,15 +12,15 @@ const NewsPostCard = ({
   className = '',
   ...props
 }) => (
-  <Link to={'/store'} className="PostCard">
     <div className="PostCard--Content">
       {company && <h3 className="PostCard--Title">{company}</h3>}
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
-      {/* {description && <div className="PostCard--Date">${author}</div>} */}
+      {parseFloat(change) > 0 && price && <div className="PostCard--Price-g">${parseFloat(price).toFixed(2)} (+{parseFloat(change).toFixed(2)}%)</div>}
+      {parseFloat(change) === 0 && price && <div className="PostCard--Price-def">${parseFloat(price).toFixed(2)} ({parseFloat(change).toFixed(2)}%)</div>}
+      {parseFloat(change) < 0 && price && <div className="PostCard--Price-r">${parseFloat(price).toFixed(2)} ({parseFloat(change).toFixed(2)}%)</div>}
     </div>
-  </Link>
 )
 
 export default NewsPostCard
