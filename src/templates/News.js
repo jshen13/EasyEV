@@ -7,14 +7,19 @@ import Layout from '../components/Layout'
 import NewsPostCard from '../components/NewsPostCard'
 import PostCard from '../components/PostCard'
 import StockCard from '../components/StockCard'
+import './News.css'
 import _ from 'lodash'
 
 export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
-  const [stockData, setStockData] = useState({});
   const [userData, setUserData] = useState({});
+  const [tslaData, setTslaData] = useState({});
+  const [blkData, setBlkData] = useState({});
+  const [gmData, setGmData] = useState({});
+  const [fordData, setFordData] = useState({});
+  const [qsData, setQsData] = useState({})
 
   useEffect(() => {
-    getNews(); getStocks();
+    getNews(); getTslaStock(); getBlkStock(); getGmStock(); getFordStock(); getQsData();
   }, []);
 
   const getNews = async() => {
@@ -26,23 +31,87 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
     setUserData(jsonData);
   }
 
-  const getStocks = async() => {
+  const getBlkStock = async() => {
+    const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=BLK&apikey=SKL5BI6O6I4Z7YQW')
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    setBlkData(jsonData);
+  }
+
+  const getTslaStock = async() => {
     const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=TSLA&apikey=SKL5BI6O6I4Z7YQW')
     if (response.status !== 200) {
       console.log('Error. Status Code: ' + response.status);
       return
     }
     const jsonData = await response.json();
-    // console.log(jsonData);
-    setStockData(jsonData);
+    setTslaData(jsonData);
+  }
+
+  const getGmStock = async() => {
+    const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=GM&apikey=SKL5BI6O6I4Z7YQW')
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    setGmData(jsonData);
+  }
+
+  const getFordStock = async() => {
+    const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=F&apikey=SKL5BI6O6I4Z7YQW')
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    setFordData(jsonData);
+  }
+
+  const getQsData = async() => {
+    const response = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=QS&apikey=SKL5BI6O6I4Z7YQW')
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    setQsData(jsonData);
   }
 
   return <React.Fragment>
-  {userData.articles && userData.articles.map(article => {
-      return <NewsPostCard key={article.title} {...article}/>
-   || stockData.articles && stockData.articles.map(article => {
-     return <StockCard key={article.company} {...article}/>
-   })})}
+    <div className="Divider"/>
+    <div className="StockCards">
+      <div className="StockCard">
+      {blkData && blkData['Global Quote'] && <StockCard company={blkData['Global Quote']['01. symbol']} 
+                                                            price={blkData['Global Quote']['05. price']}
+                                                            change={blkData['Global Quote']['09. change']}/>}
+      </div>
+      <div classname="StockCard">
+      {tslaData && tslaData['Global Quote'] && <StockCard company={tslaData['Global Quote']['01. symbol']}
+                                                            price={tslaData['Global Quote']['05. price']}
+                                                            change={tslaData['Global Quote']['09. change']}/>}
+      </div>
+      <div className="StockCard">
+      {gmData && gmData['Global Quote'] && <StockCard company={gmData['Global Quote']['01. symbol']} 
+                                                            price={gmData['Global Quote']['05. price']}
+                                                            change={gmData['Global Quote']['09. change']}/>}
+      </div>
+      <div className="StockCard">
+      {fordData && fordData['Global Quote'] && <StockCard company={fordData['Global Quote']['01. symbol']} 
+                                                            price={fordData['Global Quote']['05. price']}
+                                                            change={fordData['Global Quote']['09. change']}/>}
+      </div>
+      <div className="StockCard">
+      {qsData && qsData['Global Quote'] && <StockCard company={qsData['Global Quote']['01. symbol']} 
+                                                            price={qsData['Global Quote']['05. price']}
+                                                            change={qsData['Global Quote']['09. change']}/>}
+      </div>
+    </div>
+    {userData.articles && userData.articles.map(article => {
+      return <NewsPostCard key={article.title} {...article}/>})}, 
   </React.Fragment>
 
 }
