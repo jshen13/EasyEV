@@ -87,27 +87,27 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
       <div className="StockCard">
       {blkData && blkData['Global Quote'] && <StockCard company={blkData['Global Quote']['01. symbol']} 
                                                             price={blkData['Global Quote']['05. price']}
-                                                            change={blkData['Global Quote']['09. change']}/>}
+                                                            change={blkData['Global Quote']['10. change percent']}/>}
       </div>
       <div classname="StockCard">
       {tslaData && tslaData['Global Quote'] && <StockCard company={tslaData['Global Quote']['01. symbol']}
                                                             price={tslaData['Global Quote']['05. price']}
-                                                            change={tslaData['Global Quote']['09. change']}/>}
+                                                            change={tslaData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
       {gmData && gmData['Global Quote'] && <StockCard company={gmData['Global Quote']['01. symbol']} 
                                                             price={gmData['Global Quote']['05. price']}
-                                                            change={gmData['Global Quote']['09. change']}/>}
+                                                            change={gmData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
       {fordData && fordData['Global Quote'] && <StockCard company={fordData['Global Quote']['01. symbol']} 
                                                             price={fordData['Global Quote']['05. price']}
-                                                            change={fordData['Global Quote']['09. change']}/>}
+                                                            change={fordData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
       {qsData && qsData['Global Quote'] && <StockCard company={qsData['Global Quote']['01. symbol']} 
                                                             price={qsData['Global Quote']['05. price']}
-                                                            change={qsData['Global Quote']['09. change']}/>}
+                                                            change={qsData['Global Quote']['10. change percent']}/>}
       </div>
     </div>
     {userData.articles && userData.articles.map(article => {
