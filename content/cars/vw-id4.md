@@ -1,23 +1,22 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid+
+title: Volkswagen ID.4
 status: Published
 date: '2018-05-25'
-price: 149990
-range: 520
-acceleration: 1.99
-top_speed: 200
+price: 39995
+range: 250
+acceleration: 8.5
+top_speed: 99
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://cdn.motor1.com/images/mgl/nY6yy/s1/2021-volkswagen-id.4-exterior-in-motion.jpg
+link: https://www.vw.com/en/models/id-4.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
-  - category: Upcoming
+  - category: Volkswagen
 meta:
   description: test meta description
   title: test meta title

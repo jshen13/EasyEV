@@ -1,22 +1,23 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid+
+title: Lucid Air Pure
 status: Published
-date: '2018-05-25'
-price: 149990
-range: 520
-acceleration: 1.99
+date: '2018-07-22'
+price: 77400
+range: 406
+acceleration: 2.5
 top_speed: 200
+launch: Late 2021
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lucid-air-103-1599688020.jpg?crop=0.652xw:0.733xh;0.104xw,0.0769xh&resize=640:*
+link: https://www.lucidmotors.com/air
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Lucid
   - category: Upcoming
 meta:
   description: test meta description

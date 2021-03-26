@@ -1,23 +1,22 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid+
+title: Ford Mustang Mach-E
 status: Published
 date: '2018-05-25'
-price: 149990
-range: 520
-acceleration: 1.99
-top_speed: 200
+price: 43995
+range: 300
+acceleration: 4.8
+top_speed: 130
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://www.fordlincolncharlotte.com/inventoryphotos/758/3fmtk3r79mma01493/ip/1.jpg
+link: https://www.ford.com/suvs/mach-e/?intcmp=brand-explore-mache
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
-  - category: Upcoming
+  - category: Ford
 meta:
   description: test meta description
   title: test meta title

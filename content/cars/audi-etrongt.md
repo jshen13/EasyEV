@@ -1,22 +1,23 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid+
+title: Audi e-tron GT
 status: Published
-date: '2018-05-25'
-price: 149990
-range: 520
-acceleration: 1.99
-top_speed: 200
+date: '2018-06-23'
+price: 99900
+range: 238
+acceleration: 3.3
+top_speed: 159
+launch: Late 2021 
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://www.motortrend.com/uploads/sites/5/2021/02/2022_Audi_E-Tron_GT_RS_21.jpg?fit=around%7C875:492
+link: https://www.audiusa.com/us/web/en/models/e-tron-gt/e-tron-gt-family.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Audi
   - category: Upcoming
 meta:
   description: test meta description
