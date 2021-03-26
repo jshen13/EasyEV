@@ -5,7 +5,7 @@ import Image from './Image'
 import './PostCard.css'
 
 const NewsPostCard = ({
-  urlToImage,
+  image,
   title,
   author,
   url,
@@ -16,9 +16,9 @@ const NewsPostCard = ({
   ...props
 }) => (
   <Link to={url} className="PostCard">
-    {urlToImage && (
+    {image && (
       <div className="PostCard--Image relative">
-        <Image background src={urlToImage} alt={title} />
+        <Image background src={image} alt={title} />
       </div>
     )}
     <div className="PostCard--Content">
