@@ -131,6 +131,8 @@ export const pageQuery = graphql`
             title
             date
             price
+            mpge
+            safetyRating
             range
             acceleration
             top_speed

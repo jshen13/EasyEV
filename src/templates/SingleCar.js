@@ -18,6 +18,9 @@ export function SingleCarTemplate ({
   top_speed,
   launch,
   link,
+  mpge,
+  type,
+  safetyRating,
   featuredImage,
   nextPostURL,
   prevPostURL,
@@ -85,14 +88,17 @@ export function SingleCarTemplate ({
 
           {featuredImage && <img width="100%" src={featuredImage} alt={title} />}
 
-          <div className="SinglePost--InnerContent">
+          <div >
+            {type && <p> Type: {type} </p>}
             {price && <p>Price: ${Number(price).toLocaleString()}</p>}
             {range && <p>Range: {range} miles</p>}
             {acceleration && <p>0-60 mph Acceleration: {acceleration} seconds</p>}
-            {top_speed && <p>Top Speed: {top_speed} mph</p>}
+            {top_speed && <p>Top Speed: {top_speed}</p>} 
+            {mpge && <p>MPGe: {mpge} combined</p>}
+            {safetyRating && <p>Safety Rating: {safetyRating}/5</p>}
             {launch && <p>Release Date: {launch}</p>}
           </div>
-          {link && <div className="SinglePost--InnerContent">
+          {link && <div >
           
             Learn more at <Link to={link} target="__blank">{link}</Link>
             {/* <Content source={body} /> */}
@@ -171,6 +177,9 @@ export const pageQuery = graphql`
         acceleration
         top_speed
         launch
+        mpge
+        safetyRating
+        type
         link
         date(formatString: "MMMM Do, YYYY")
         categories {

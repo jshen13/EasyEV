@@ -161,6 +161,7 @@ export const pageQuery = graphql`
             acceleration
             top_speed
             launch
+            mpge
             categories {
               category
             }

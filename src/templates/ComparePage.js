@@ -118,6 +118,8 @@ export const pageQuery = graphql`
             date
             price
             range
+            mpge
+            safetyRating
             acceleration
             top_speed
             categories {

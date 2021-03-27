@@ -13,6 +13,7 @@ const PostCard = ({
   acceleration,
   top_speed,
   slug,
+  mpge,
   categories = [],
   className = '',
   ...props
@@ -32,7 +33,7 @@ const PostCard = ({
       {price && <div className="PostCard--Price">${Number(price).toLocaleString()}</div>}
       {range && <div className="PostCard--Range">{range} mi range</div>}
       {acceleration && <div className="PostCard--Range">{acceleration} s 0-60 mph</div>}
-      {top_speed && <div className="PostCard--Range">{top_speed} mph top speed</div>}
+      {mpge && <div className="PostCard--Range">{mpge} MPGe</div>}
       {/* {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>} */}
     </div>
   </Link>

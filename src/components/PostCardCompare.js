@@ -46,9 +46,16 @@ const PostCardCompare = ({
             {car1.categories && car1.categories.map(cat => cat.category).join(', ')}
           </div>
           {car1.price && <div className={car2 && car2.price ? ("PostCard--Attr-" + colorChooser(car1.price, car2.price, true)) : "PostCard--Attr-default"}>${Number(car1.price).toLocaleString()}</div>}
+
           {car1.range && <div className={car2 && car2.range ? ("PostCard--Attr-" + colorChooser(car1.range, car2.range, false)) : "PostCard--Attr-default"}>{car1.range} mi range </div>}
+
           {car1.acceleration && <div className={car2 && car2.acceleration ? ("PostCard--Attr-" + colorChooser(car1.acceleration, car2.acceleration, true)) : "PostCard--Attr-default"}>{car1.acceleration} s 0-60 mph</div>}
+
           {car1.top_speed && <div className={car2 && car2.top_speed ? ("PostCard--Attr-" + colorChooser(car1.top_speed, car2.top_speed, false)) : "PostCard--Attr-default"}>{car1.top_speed} mph top speed</div>}
+
+          {car1.mpge && <div className={car2 && car2.mpge ? ("PostCard--Attr-" + colorChooser(car1.mpge, car2.mpge, false)) : "PostCard--Attr-default"}>{car1.mpge} MPGe</div>}
+
+          {car1.safetyRating && <div className={car2 && car2.safetyRating ? ("PostCard--Attr-" + colorChooser(car1.safetyRating, car2.safetyRating, false)) : "PostCard--Attr-default"}>{car1.safetyRating}/5 Safety Rating</div>}
         </div>
       </Link>}
   </React.Fragment>
