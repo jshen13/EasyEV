@@ -104,6 +104,8 @@ export function SingleCarTemplate ({
           {launch && <Popup/>}
           <div className='Divider'/>
           
+
+          <h2>Relevant news:</h2>
           {news.articles && news.articles.map(article => {
               return <NewsPostCard key={article.title} {...article}/>})}
 

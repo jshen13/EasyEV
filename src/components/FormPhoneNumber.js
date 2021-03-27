@@ -6,18 +6,27 @@ import './Form.css'
 class FormPhoneNumber extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {phoneNumber: '', name: 'Register Phone Number'};
+    this.state = {phoneNumber: '', name: 'Register Phone Number', submitted: false && this.state.phoneNumber};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.afterSubmission = this.afterSubmission.bind(this);
   }
 
   handleSubmit(event) {
-    this.setState({phoneNumber: event.target.value});
     this.sendSMS(this.phoneNumber);
+    this.setState({submitted: true && this.state.phoneNumber});
     event.preventDefault();
   }
 
+  handleChange(event) {
+    this.setState({phoneNumber: event.target.value});
+    if (!this.state.phoneNumber) {
+      this.setState({submitted: false});
+    }
+  }
+
   afterSubmission(event) {
+    this.setState({phoneNumber: event.target.value});
     event.preventDefault();
   }
 
@@ -57,20 +66,21 @@ class FormPhoneNumber extends React.Component {
               type='text'
               placeholder='Phone Number'
               name='name'
+              value={this.state.phoneNumber}
+              onChange={this.handleChange}
               required
             />
           </label>
-          <input type='text' name='_gotcha' style={{ display: 'none' }} />
+          <input type='text' name='_gotcha' style={{display: 'none'}}/>
           <input type='hidden' name='form-name' value={this.state.name} />
           
           <input
             className='Button Form--SubmitButton'
             type='submit'
             value='Submit'
-            onClick={this.handleSubmit}
           />
         </form>
-        {this.state.phoneNumber && <p>We have received your phone number!</p>}
+        {this.state.submitted && this.state.phoneNumber && <p>We have received your phone number!</p>}
       </center>
     );
   }
