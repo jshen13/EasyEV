@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PostCard from './PostCard';
 import PostCardCompare from './PostCardCompare';
 import './Form.css'
 
@@ -31,7 +30,7 @@ export class CompareComp extends React.Component {
   
     getCarFromTitle(carTitle) {
         for (var i = 0; i < this.props.cars.length; i++) {
-            if (carTitle == this.props.cars[i].title) {
+            if (carTitle === this.props.cars[i].title) {
                 return this.props.cars[i];
             }
         }
@@ -41,7 +40,7 @@ export class CompareComp extends React.Component {
         let carsTitleList = this.props.cars.length > 0
     	&& this.props.cars.map((item, i) => {
       return (
-        <option >{item.title}</option>
+        <option>{item.title}</option>
       )
     }, this);
 

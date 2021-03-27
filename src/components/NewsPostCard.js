@@ -3,8 +3,6 @@ import { Link } from 'gatsby'
 
 import Image from './Image'
 import './NewsPostCard.css'
-import Popup from './Popup'
-import Content from './Content'
 
 function convertDate(date) {
   let d = new Date(date);
@@ -28,14 +26,13 @@ function getColorFromScore(score) {
 }
 
 function getSentimentString(score) {
-  if (score == 0) {
+  if (score === 0) {
     return score;
   } else if (score < 0) {
     return "👎 " + score;
   } else {
     return "👍 " + score;
   }
-  return;
 }
 
 export default function NewsPostCard({

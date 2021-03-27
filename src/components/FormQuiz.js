@@ -4,9 +4,9 @@ import './Form.css'
 
 export class FormQuiz extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = {priceChoice: '', rangeChoice: '', accelerationChoice: '', submitted: false, car1: '', car2: ''};
-      this.handlePriceChange = this.handlePriceChange.bind(this);
+    super(props);
+    this.state = {priceChoice: '', rangeChoice: '', accelerationChoice: '', submitted: false, car1: '', car2: ''};
+    this.handlePriceChange = this.handlePriceChange.bind(this);
     this.handleRangeChange = this.handleRangeChange.bind(this);
     this.handleAccelerationChange = this.handleAccelerationChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +25,6 @@ export class FormQuiz extends React.Component {
 
   }
 
-  
   handlePriceChange(event) {
     this.setState({ priceChoice: event.target.value, submitted: true });
     this.findMatchingCars(event.target.value, this.state.rangeChoice, this.state.accelerationChoice);
@@ -49,7 +48,7 @@ export class FormQuiz extends React.Component {
 
   getCarFromTitle(carTitle) {
       for (var i = 0; i < this.props.cars.length; i++) {
-          if (carTitle == this.props.cars[i].title) {
+          if (carTitle === this.props.cars[i].title) {
               return this.props.cars[i];
           }
       }
@@ -65,9 +64,9 @@ export class FormQuiz extends React.Component {
     let accelerationLow = 0;
     let accelerationHigh = 500;
     
-    if (priceChoice == this.priceChoice1) {
+    if (priceChoice === this.priceChoice1) {
       priceHigh = 50000;
-    } else if (priceChoice == this.priceChoice2) {
+    } else if (priceChoice === this.priceChoice2) {
       
       priceHigh = 100000;
     } else if (priceChoice === this.priceChoice3) {
@@ -80,9 +79,9 @@ export class FormQuiz extends React.Component {
       rangeLow = 150;
     }
     
-    if (accelerationChoice == this.accelerationChoice2) {
+    if (accelerationChoice === this.accelerationChoice2) {
       accelerationHigh = 4.4;
-    } else if (accelerationChoice == this.accelerationChoice3) {
+    } else if (accelerationChoice === this.accelerationChoice3) {
       accelerationHigh = 3;
     }
     for (var i = 0; i < this.props.cars.length; i++) {
@@ -92,7 +91,7 @@ export class FormQuiz extends React.Component {
         if (rtnCars.length < 2) {
           rtnCars.push(car);
         }
-        if (rtnCars.length == 2) {
+        if (rtnCars.length === 2) {
           break;
         }
       }
@@ -106,7 +105,7 @@ export class FormQuiz extends React.Component {
     return;
   }
   render() {
-      let carsTitleList = this.props.cars.length > 0
+      this.props.cars.length > 0
     && this.props.cars.map((item, i) => {
     return (
       <option >{item.title}</option>
@@ -185,12 +184,6 @@ export class FormQuiz extends React.Component {
           
     <input type='text' name='_gotcha' style={{ display: 'none' }} />
             <input type='hidden' name='form-name' value='EV Quiz' />
-    <input
-              className='Button Form--SubmitButton'
-              onChange={this.handleSubmit}
-      type='submit'
-      value='Submit'
-    />
   </form>
 
 

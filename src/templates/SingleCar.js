@@ -2,9 +2,7 @@ import React, {Fragment, useState, useEffect} from 'react'
 import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
-import Image from '../components/Image'
 
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SingleCar.css'
 import NewsPostCard from '../components/NewsPostCard'
@@ -33,7 +31,7 @@ export function SingleCarTemplate ({
   }, [])
 
   const getNews = async(title) => {
-    const response = await fetch('https://gnews.io/api/v4/search?q=' + title.replace(/[^a-zA-Z ]/g, " ") +'&lang=en&token=98930b2762414b74c241607a335d7f8c');
+    const response = await fetch('https://gnews.io/api/v4/search?q=' + title.replace(/[^a-zA-Z0-9]/g, " ") +'&lang=en&token=98930b2762414b74c241607a335d7f8c');
     if (response.status !== 200) {
       return
     }

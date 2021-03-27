@@ -1,14 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { graphql } from 'gatsby'
 
-import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import NewsPostCard from '../components/NewsPostCard'
-import PostCard from '../components/PostCard'
 import StockCard from '../components/StockCard'
 import './News.css'
-import _ from 'lodash'
 
 export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   const [userData, setUserData] = useState({});
@@ -25,7 +21,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   const getNews = async() => {
     const response = await fetch('https://gnews.io/api/v4/search?q=electric%20vehicles&lang=en&token=f54d3508cb818bb0412f54a202c9f83d', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
     if (response.status !== 200) {
-      console.log(jsonData)
+      console.log('Error. Status Code: ' + response.status);
       return
     }
     const jsonData = await response.json();
