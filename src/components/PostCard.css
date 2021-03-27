@@ -32,13 +32,17 @@
 
 .PostCard--Price-g {
   padding: 0 1.5rem 1.5rem;
-  color: green;
+  color: #37c92c;
   /* background: green; */
+}
+
+.PostCard--Price {
+  padding: 0 2.5rem 1rem;
 }
 
 .PostCard--Price-r {
   padding: 0 2.5rem 2.5rem;
-  color: red;
+  color: #d42828;
 }
 
 .PostCard--Price-def {
@@ -71,4 +75,20 @@
 .PostCard--Temp {
   text-decoration: none;
   color: inherit;
+}
+
+.StockCard--Color-g {
+    /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+  padding-left: 5px;
+  background: #32ad5d; /*#f0f0f0;*/
+  color: white;
+  border-radius: 5px;
+}
+
+.StockCard--Color-r {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding-left: 5px;
+  background: #ad3232; /*#f0f0f0;*/
+  color: white;
+  border-radius: 5px;
 }
