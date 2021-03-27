@@ -1,14 +1,17 @@
 .StockCards {
   border: 1px solid var(--black);
   border-radius: var(--borderRadius);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+  /* background: #383838; */
+  /* color: white; */
   display: flex
 }
 
 .StockCards div {
-  flex: 40%
+  /* flex: 20% */
 }
 
 .StockCard {
-  flex:40%
+  flex: 20%;
 }
