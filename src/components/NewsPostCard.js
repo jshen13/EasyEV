@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 
 import Image from './Image'
 import './NewsPostCard.css'
-
+import Popup from './Popup'
+import Content from './Content'
 
 function convertDate(date) {
   let d = new Date(date);
@@ -13,7 +14,28 @@ function convertDate(date) {
 }
 
 function getSentimentScore(magnitude, score) {
-  return Math.round((magnitude * score * 10)* 100) / 100
+  return Math.round((magnitude * score * 10)* 100) / 100;
+}
+
+function getColorFromScore(score) {
+  if (score > 0.2) {
+    return 'green';
+  } else if (score < -0.2) {
+    return 'red';
+  } else {
+    return 'yellow'
+  }
+}
+
+function getSentimentString(score) {
+  if (score == 0) {
+    return score;
+  } else if (score < 0) {
+    return "👎 " + score;
+  } else {
+    return "👍 " + score;
+  }
+  return;
 }
 
 export default function NewsPostCard({
@@ -65,13 +87,17 @@ export default function NewsPostCard({
       {title && <h3 className="PostCard--Title">{title}</h3>}
       <div className="NewsCard--MetaData">
 {publishedAt && <div className="PostCard--Date">{convertDate(publishedAt)}</div>}
+{sentimentData && sentimentData.documentSentiment && <div className="NewsCard--Score"><div className={"NewsCard--ScoreIcon-" + getColorFromScore(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}>
+{getSentimentString(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}</div>
+</div>}
+
       </div>
       {/* {author && <div className="PostCard--Author">{author}</div>} */}
       
       {/* {description && <div className="PostCard--Date">${author}</div>} */}
       {description && <div className="PostCard--Excerpt">{description }</div>}
 
-      {sentimentData && sentimentData.documentSentiment && getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score)}
+      
     </div>
   
   </div>

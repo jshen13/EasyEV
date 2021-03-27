@@ -13,6 +13,40 @@
   display: flex;
 }
 
+.NewsCard--Score {
+  flex: 20%;
+}
+
+.NewsCard--ScoreIcon-green {
+  display: inline-block;
+  padding: 3px;
+  float: right;
+  border-radius: 6px;
+  background: #32ad5d; /* #1e731e;*/
+  color: white;
+}
+
+.NewsCard--ScoreIcon-yellow {
+  display: inline-block;
+  padding: 3px;
+  float: right;
+  border-radius: 6px;
+  background: #e6d249;
+}
+
+.NewsCard--ScoreIcon-red {
+  display: inline-block;
+  padding: 3px;
+  float: right;
+  border-radius: 6px;
+  background: #ad3232; /* #9c2727;*/
+  color: white;
+}
+
+.NewsCard--MetaData {
+  display: flex;
+}
+
 .PostCard:hover,
 .PostCard:focus {
   transform: translateY(-1px);
@@ -36,6 +70,11 @@
 .PostCard--Content {
   padding: 0 2.5rem 2.5rem;
   flex: 75%;
+}
+
+.PostCard--Date {
+  padding: 0 2.5rem 2.5rem;
+  flex: 50%;
 }
 
 .PostCard--Price-g {

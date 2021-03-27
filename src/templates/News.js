@@ -84,7 +84,6 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
 
   return <React.Fragment>
   <div className="container">
-    <div className="Divider"/>
     <div className="StockCards">
       <div className="StockCard">
       {blkData && blkData['Global Quote'] && 
@@ -117,6 +116,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
         change={qsData['Global Quote']['10. change percent']}/>}
       </div>
     </div>
+
     {userData.articles && userData.articles.map(article => {
       return <NewsPostCard key={article.title} {...article}/>})}
     {!userData.articles && <p>Loading...</p>}
