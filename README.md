@@ -16,9 +16,10 @@ The home page features navigation for the user to start a quiz or visit the news
 ### Explore
 The explore page contains a grid containing a vast collection of various electric vehicles. 
 
-![Explore Page Demo](https://i.imgur.com/pEwwrW9.gif)
+<!-- ![Explore Page Demo](https://i.imgur.com/pEwwrW9.gif) -->
+![Explore Page Demo 2](https://i.imgur.com/l7xcV09.gif)
 
-The user can choose to sort this collection by manufacturer, and also has the option to search for a particular car by its name. Each car in the grid can be expanded to reveal more information. 
+The user can choose to sort this collection by manufacturer, and also has the option to search for a particular car by its name. Each car in the grid can be expanded to reveal more information such as price, type of car, MPGe, safety rating as well as news related to the vehicle. 
 
 ![Explore Company Demo](https://i.imgur.com/qPSavsW.gif)
 
