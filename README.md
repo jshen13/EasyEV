@@ -9,7 +9,9 @@ Electric vehicles are inevitably the future of transportation. However, the nove
 ## Layout
 ### Home
 The home page features navigation for the user to start a quiz or visit the news page. The text below the banner explains reasons to purchase an electric vehicle, and has drop-down menus for answers to frequently-asked questions.
-![Home Demo](https://i.imgur.com/akvgO6k.gif)
+
+<!-- ![Home Demo](https://i.imgur.com/akvgO6k.gif) -->
+![Home Demo 2](https://i.imgur.com/dsrnX51.gif)
 
 ### Explore
 The explore page contains a grid containing a vast collection of various electric vehicles. 
@@ -33,7 +35,8 @@ The compare page allows the user to compare any two cars by selecting them from 
 ### EV Quiz
 The quiz page features three questions about the user's preferences accompanied by three dropdown menus for each question. After choosing an option for each question, the two cars that fit the criteria the most are shown and compared.
 
-![EV Quiz Demo](https://i.imgur.com/BwPPK1t.gif)
+<!-- ![EV Quiz Demo](https://i.imgur.com/BwPPK1t.gif) -->
+![EV Quiz Demo 2](https://i.imgur.com/yjuiwwZ.gif)
 
 ### News
 The news page has stock information of various companies at the top, where a ticker is red when the company's stock price is down on the day, and green when the company's stock is up on the day. Below the stock section, news articles pertaining to electric vehicles are shown, where the image, title, date, description, and sentiment score are displayed for each article. The sentiment score is determined by feeding the contents of the article into the Google Cloud natural language processing service. The stock and news information is updated live, and retrieved using API's provided by GNews and AlphaVantage.
