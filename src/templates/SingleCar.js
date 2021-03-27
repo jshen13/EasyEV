@@ -88,14 +88,11 @@ export function SingleCarTemplate ({
           {featuredImage && <img width="100%" src={featuredImage} alt={title} />}
 
           <div className="SinglePost--InnerContent">
-            Price: ${Number(price).toLocaleString()}
-            <br></br>
-            Range: {range} miles
-            <br />
-            0-60 mph Acceleration: {acceleration} seconds
-            <br/>
-            Top Speed: {top_speed} mph
-            <br/>
+            {price && <p>Price: ${Number(price).toLocaleString()}</p>}
+            {range && <p>Range: {range} miles</p>}
+            {acceleration && <p>0-60 mph Acceleration: {acceleration} seconds</p>}
+            {top_speed && <p>Top Speed: {top_speed} mph</p>}
+            {launch && <p>Release Date: {launch}</p>}
           </div>
           {link && <div className="SinglePost--InnerContent">
           
