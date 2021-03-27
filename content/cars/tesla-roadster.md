@@ -9,7 +9,7 @@ acceleration: 1.9
 top_speed: 250
 type: Luxury Sports Car
 featuredImage: >-
-  http://cdn.carbuzz.com/gallery-images/1600/523000/700/523781.jpg
+  https://cdn.carbuzz.com/gallery-images/1600/523000/700/523781.jpg
 link: https://www.tesla.com/roadster
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
