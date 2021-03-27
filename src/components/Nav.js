@@ -48,7 +48,6 @@ export class Navigation extends Component {
           } ${className}`}
           onClick={this.handleLinkClick}
           onKeyDown={this.handleLinkKeyDown}
-          tabIndex={0}
           aria-label="Navigation"
           role="button"
           {...props}
