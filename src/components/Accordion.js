@@ -45,7 +45,6 @@ export default class Accordion extends React.Component {
               key={`accordion-item-${_kebabCase(item.title) + '-' + index}`}
               onClick={this.toggleAccordion.bind(this)}
               onKeyDown={this.handleKeyDown}
-              tabIndex={0}
               aria-label="Toggle Accordion"
               role="button"
             >
