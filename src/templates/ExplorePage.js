@@ -154,6 +154,7 @@ export const pageQuery = graphql`
             range
             acceleration
             top_speed
+            launch
             categories {
               category
             }

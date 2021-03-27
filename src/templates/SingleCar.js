@@ -8,6 +8,7 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SingleCar.css'
 import NewsPostCard from '../components/NewsPostCard'
+import Popup from '../components/Popup'
 
 export function SingleCarTemplate ({
   title,
@@ -17,6 +18,7 @@ export function SingleCarTemplate ({
   range,
   acceleration,
   top_speed,
+  launch,
   link,
   featuredImage,
   nextPostURL,
@@ -31,8 +33,7 @@ export function SingleCarTemplate ({
   }, [])
 
   const getNews = async(title) => {
-    const response = await fetch('https://gnews.io/api/v4/search?q=' + title +'&lang=en&token=c5bc330bef02ee2c9cb157940cd190bc');
-    console.log(title);
+    const response = await fetch('https://gnews.io/api/v4/search?q=' + title.replace(/[^a-zA-Z ]/g, " ") +'&lang=en&token=c5bc330bef02ee2c9cb157940cd190bc');
     if (response.status !== 200) {
       return
     }
@@ -96,12 +97,15 @@ export function SingleCarTemplate ({
             Top Speed: {top_speed} mph
             <br/>
           </div>
-          {console.log(news)}
           {link && <div className="SinglePost--InnerContent">
           
             Learn more at <Link to={link} target="__blank">{link}</Link>
             {/* <Content source={body} /> */}
           </div>}
+          
+          <div className='Divider'/>
+          {launch && <Popup/>}
+          <div className='Divider'/>
           
           {news.articles && news.articles.map(article => {
               return <NewsPostCard key={article.title} {...article}/>})}
@@ -169,6 +173,7 @@ export const pageQuery = graphql`
         range
         acceleration
         top_speed
+        launch
         link
         date(formatString: "MMMM Do, YYYY")
         categories {

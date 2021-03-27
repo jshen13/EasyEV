@@ -23,7 +23,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   }, []);
 
   const getNews = async() => {
-    const response = await fetch('https://gnews.io/api/v4/search?q=electric%20vehicles&lang=en&token=47572facdf1c451eb7ee9fe9582bd681', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
+    const response = await fetch('https://gnews.io/api/v4/search?q=electric%20vehicles&lang=en&token=f54d3508cb818bb0412f54a202c9f83d', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
     if (response.status !== 200) {
       console.log(jsonData)
       return
