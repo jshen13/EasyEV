@@ -7,6 +7,9 @@ price: 55085
 range: 208
 acceleration: 4.7
 top_speed: 143
+mpge: 70
+type: Luxury Subcompact SUV
+safetyRating: 5
 featuredImage: >-
   https://images.hgmsites.net/hug/volvo-xc40_100720486_h.jpg
 link: https://www.volvocars.com/us/v/cars/xc40-electric

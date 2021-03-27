@@ -7,6 +7,7 @@ price: 149990
 range: 520
 acceleration: 1.99
 top_speed: 200
+type: Liftback Sedan
 featuredImage: >-
   https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
 link: https://www.tesla.com/models

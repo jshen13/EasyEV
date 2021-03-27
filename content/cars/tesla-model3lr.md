@@ -7,6 +7,9 @@ price: 46990
 range: 353
 acceleration: 4.2
 top_speed: 145
+mpge: 121
+type: Mid-Size Sedan
+safetyRating: 5
 featuredImage: >-
   https://tesla-cdn.thron.com/delivery/public/image/tesla/c82315a6-ac99-464a-a753-c26bc0fb647d/bvlatuR/std/1200x628/lhd-model-3-social
 link: https://www.tesla.com/model3

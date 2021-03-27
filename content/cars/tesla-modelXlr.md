@@ -7,6 +7,9 @@ price: 89990
 range: 360
 acceleration: 3.8
 top_speed: 155
+mpge: 96
+type: Crossover SUV
+safetyRating: 5
 featuredImage: >-
   https://tesla-cdn.thron.com/delivery/public/image/tesla/3863f3e5-546a-4b22-bcbc-1f8ee0479744/bvlatuR/std/1200x628/MX-Social
 link: https://www.tesla.com/modelx

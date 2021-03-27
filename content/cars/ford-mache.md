@@ -7,6 +7,8 @@ price: 43995
 range: 300
 acceleration: 4.8
 top_speed: 130
+mpge: 100
+type: Crossover SUV
 featuredImage: >-
   https://www.fordlincolncharlotte.com/inventoryphotos/758/3fmtk3r79mma01493/ip/1.jpg
 link: https://www.ford.com/suvs/mach-e/?intcmp=brand-explore-mache

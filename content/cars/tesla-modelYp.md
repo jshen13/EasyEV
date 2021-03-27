@@ -7,6 +7,9 @@ price: 60990
 range: 353
 acceleration: 4.2
 top_speed: 145
+mpge: 121
+type: Crossover Sedan
+safetyRating: 5
 featuredImage: >-
   https://www.tesla.com/assets/img/my_fb_s.jpg
 link: https://www.tesla.com/modely

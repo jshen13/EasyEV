@@ -7,7 +7,8 @@ price: 99900
 range: 238
 acceleration: 3.3
 top_speed: 159
-launch: Late 2021 
+launch: Late 2021
+type: Hatchback
 featuredImage: >-
   https://www.motortrend.com/uploads/sites/5/2021/02/2022_Audi_E-Tron_GT_RS_21.jpg?fit=around%7C875:492
 link: https://www.audiusa.com/us/web/en/models/e-tron-gt/e-tron-gt-family.html

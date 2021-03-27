@@ -7,6 +7,9 @@ price: 39995
 range: 250
 acceleration: 8.5
 top_speed: 99
+mpge: 97
+type: Sedan
+safetyRating: 5
 featuredImage: >-
   https://cdn.motor1.com/images/mgl/nY6yy/s1/2021-volkswagen-id.4-exterior-in-motion.jpg
 link: https://www.vw.com/en/models/id-4.html

@@ -8,6 +8,7 @@ range: 406
 acceleration: 2.5
 top_speed: 200
 launch: Late 2021
+type: Sedan
 featuredImage: >-
   https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lucid-air-103-1599688020.jpg?crop=0.652xw:0.733xh;0.104xw,0.0769xh&resize=640:*
 link: https://www.lucidmotors.com/air

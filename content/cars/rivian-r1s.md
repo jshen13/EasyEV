@@ -7,6 +7,7 @@ price: 70000
 range: 300
 acceleration: 3
 launch: Late 2021 
+type: SUV
 featuredImage: >-
   https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2018-11-r1s-2-1-1571766376.jpg
 link: https://rivian.com/r1s

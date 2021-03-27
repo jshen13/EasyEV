@@ -7,6 +7,9 @@ price: 79990
 range: 412
 acceleration: 3.1
 top_speed: 155
+mpge: 111
+type: Liftback Sedan
+safetyRating: 5
 featuredImage: >-
   https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
 link: https://www.tesla.com/models
