@@ -12,8 +12,8 @@ export class FormQuiz extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     
     this.priceChoice1 = "$0 to $50,000";
-    this.priceChoice2 = "$50,000 to $100,000";
-    this.priceChoice3 = "$100,000+";
+    this.priceChoice2 = "$50,000 to $80,000";
+    this.priceChoice3 = "$80,000+";
 
     this.rangeChoice1 = "Local (0 to 100 mi)";
     this.rangeChoice2 = "Non-Local (100-200 mi)";
@@ -68,7 +68,7 @@ export class FormQuiz extends React.Component {
       priceHigh = 50000;
     } else if (priceChoice === this.priceChoice2) {
       
-      priceHigh = 100000;
+      priceHigh = 80000;
     } else if (priceChoice === this.priceChoice3) {
       priceLow = 75000;
     }
