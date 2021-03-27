@@ -109,7 +109,7 @@ export function SingleCarTemplate ({
           <div className='Divider'/>
           
 
-          <h2>Relevant news:</h2>
+          <h2>Relevant News:</h2>
           {news.articles && news.articles.map(article => {
               return <NewsPostCard key={article.title} {...article}/>})}
 
