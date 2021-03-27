@@ -91,7 +91,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
         price={blkData['Global Quote']['05. price']}
         change={blkData['Global Quote']['10. change percent']}/>}
       </div>
-      <div classname="StockCard">
+      <div className="StockCard">
       {tslaData && tslaData['Global Quote'] && 
       <StockCard company={tslaData['Global Quote']['01. symbol']}
       price={tslaData['Global Quote']['05. price']}
@@ -117,7 +117,8 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
       </div>
     </div>
 
-    {userData.articles && userData.articles.map(article => {
+    {userData.articles && userData.articles.filter((item, pos) => 
+    userData.articles.map(e => e.title).indexOf(item.title) === pos).map(article => {
       return <NewsPostCard key={article.title} {...article}/>})}
     {!userData.articles && <p>Loading...</p>}
     </div>
