@@ -22,12 +22,16 @@ videoTitle: Also background videos, with poster image & title overlay.
 accordion:
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
+    graph: false
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
+    graph: false
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
+    graph: false
   - description: Taciti lorem tempor quam vestibulum dis habitasse
     title: Taciti lorem
+    graph: false
 gallery:
   - alt: yellow rope image
     image: https://ucarecdn.com/277cdf82-24aa-4d80-8169-bb46f4cd319d/
