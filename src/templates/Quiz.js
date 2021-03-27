@@ -47,6 +47,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
+        subtitle
         price
         range
         acceleration
