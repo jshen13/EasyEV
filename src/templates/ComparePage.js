@@ -22,7 +22,6 @@ export const ComponentsPageTemplate = ({
   video,
   videoPoster,
   videoTitle,
-  accordion,
   body,
   gallery,
   cars = []
@@ -107,10 +106,6 @@ export const pageQuery = graphql`
         video
         videoPoster
         videoTitle
-        accordion {
-          title
-          description
-        }
       }
     }
     cars: allMarkdownRemark(
