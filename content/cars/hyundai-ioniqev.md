@@ -1,26 +1,25 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: Hyundai Ioniq Electric
 status: Published
-date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
-launch: 2021-2022
+date: '2018-06-22'
+price: 33245
+range: 170
+acceleration: 8.4
+type: Mid-size sedan
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://www.electrive.com/wp-content/uploads/2019/05/hyundai-ioniq-elektro-ioniq-electric-2020-01.png
+link: https://www.hyundaiusa.com/us/en/vehicles/ioniq-electric
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Hyundai
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: Hyundai Ioniq Electric
 
 
 ---

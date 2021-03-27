@@ -1,6 +1,6 @@
 ---
 template: SingleCar
-title: Chevy Bolt
+title: Chevrolet Bolt
 status: Published
 date: '2018-05-26'
 price: 41700
@@ -19,7 +19,7 @@ categories:
   - category: Chevy
 meta:
   description: test meta description
-  title: Chevy Bolt
+  title: Chevrolet Bolt
 
 
 ---

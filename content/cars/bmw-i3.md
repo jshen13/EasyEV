@@ -1,26 +1,27 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: BMW i3
 status: Published
-date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
-launch: 2021-2022
+date: '2018-05-24'
+price: 44450
+range: 153
+mpge: 102
+acceleration: 7.3
+top_speed: 93
+type: Compact sedan
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+ https://www.autocar.co.uk/sites/autocar.co.uk/files/bmw-i3s-rt-2018-2586.jpg
+link: https://www.bmwusa.com/vehicles/bmwi/i3/sedan/overview.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: BMW
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: BMW i3
 
 
 ---

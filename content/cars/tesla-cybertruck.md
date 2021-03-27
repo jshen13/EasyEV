@@ -1,16 +1,16 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: Tesla Cybertruck
 status: Published
-date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
+date: '2018-05-25'
+price: 69900
+range: 500
+acceleration: 2.9
+type: Pickup Truck
 launch: 2021-2022
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://www.tesla.com/xNVh4yUEc3B9/04_Desktop.jpg
+link: https://www.tesla.com/cybertruck
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
@@ -18,9 +18,10 @@ excerpt: >-
   English, not any other language.
 categories:
   - category: Tesla
+  - category: Upcoming
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: Tesla Cybertruck
 
 
 ---

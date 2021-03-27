@@ -1,26 +1,27 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: Kia Niro EV
 status: Published
-date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
-launch: 2021-2022
+date: '2018-06-22'
+price: 39090
+range: 239
+mpge: 110
+acceleration: 6.2
+top_speed: 104
+type: Compact SUV
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://www.motortrend.com/uploads/sites/5/2019/11/2019-Kia-Niro-ECO-Electric-front-three-quarter-in-motion-1.jpg
+link: https://www.kia.com/us/en/niro-ev
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Kia
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: Kia Niro EV
 
 
 ---
