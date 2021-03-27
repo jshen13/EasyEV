@@ -83,10 +83,10 @@ export default function NewsPostCard({
     <div className="PostCard--Content">
       {title && <h3 className="PostCard--Title">{title}</h3>}
       <div className="NewsCard--MetaData">
-{publishedAt && <div className="PostCard--Date">{convertDate(publishedAt)}</div>}
-{sentimentData && sentimentData.documentSentiment && <div className="NewsCard--Score"><div className={"NewsCard--ScoreIcon-" + getColorFromScore(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}>
-{getSentimentString(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}</div>
-</div>}
+        {publishedAt && <div className="PostCard--Date">{convertDate(publishedAt)}</div>}
+        {sentimentData && sentimentData.documentSentiment && <div className="NewsCard--Score"><div className={"NewsCard--ScoreIcon-" + getColorFromScore(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}>
+        {getSentimentString(getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score))}</div>
+      </div>}
 
       </div>
       {/* {author && <div className="PostCard--Author">{author}</div>} */}
