@@ -7,18 +7,9 @@ import Image from '../components/Image'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SingleCar.css'
+import NewsPostCard from '../components/NewsPostCard'
 
-var news;
-
-const getNews = async(title) => {
-  const response = await fetch('https://newsapi.org/v2/everything?q=' + title +'s&apiKey=81335da982204a83b4416040fad0f2db');
-  if (response.status !== 200) {
-    return
-  }
-  news = await response.json();
-}
-
-export const SingleCarTemplate = ({
+export function SingleCarTemplate ({
   title,
   date,
   body,
@@ -31,8 +22,25 @@ export const SingleCarTemplate = ({
   nextPostURL,
   prevPostURL,
   categories = []
-}) => (
-  <main>
+}) {
+  
+  const [news, setNews] = useState({});
+
+  useEffect(() => {
+    getNews(title);
+  }, [])
+
+  const getNews = async(title) => {
+    const response = await fetch('https://gnews.io/api/v4/search?q=' + title +'&lang=en&token=c5bc330bef02ee2c9cb157940cd190bc');
+    console.log(title);
+    if (response.status !== 200) {
+      return
+    }
+    const jsonData = await response.json();
+    setNews(jsonData);
+  }
+
+  return (<main>
     <article
       className="SinglePost section light"
       itemScope
@@ -84,19 +92,19 @@ export const SingleCarTemplate = ({
             Range: {range} miles
             <br />
             0-60 mph Acceleration: {acceleration} seconds
-            <br />
+            <br/>
             Top Speed: {top_speed} mph
             <br/>
-            {/* {getNews(title)}
-            console.log(news)
-            News: {news['articles']['0']['url']} */}
           </div>
-          
+          {console.log(news)}
           {link && <div className="SinglePost--InnerContent">
           
             Learn more at <Link to={link} target="__blank">{link}</Link>
             {/* <Content source={body} /> */}
           </div>}
+          
+          {news.articles && news.articles.map(article => {
+              return <NewsPostCard key={article.title} {...article}/>})}
 
           <div className="SinglePost--Pagination">
             {prevPostURL && (
@@ -119,8 +127,8 @@ export const SingleCarTemplate = ({
         </div>
       </div>
     </article>
-  </main>
-)
+  </main>)
+}
 
 // Export Default SinglePost for front-end
 const SingleCar = ({ data: { post, allPosts } }) => {
