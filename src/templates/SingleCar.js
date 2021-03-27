@@ -33,7 +33,7 @@ export function SingleCarTemplate ({
   }, [])
 
   const getNews = async(title) => {
-    const response = await fetch('https://gnews.io/api/v4/search?q=' + title.replace(/[^a-zA-Z ]/g, " ") +'&lang=en&token=c5bc330bef02ee2c9cb157940cd190bc');
+    const response = await fetch('https://gnews.io/api/v4/search?q=' + title.replace(/[^a-zA-Z ]/g, " ") +'&lang=en&token=98930b2762414b74c241607a335d7f8c');
     if (response.status !== 200) {
       return
     }
