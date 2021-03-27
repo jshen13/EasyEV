@@ -23,7 +23,7 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   }, []);
 
   const getNews = async() => {
-    const response = await fetch('https://gnews.io/api/v4/search?q=electric%20vehicles&token=b7becc5a5c6d4b6007bd9f1d92a26c52', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
+    const response = await fetch('https://gnews.io/api/v4/search?q=electric%20vehicles&token=0c7636b0dbb35263db8fa4614838d9c4', {'Connection': 'upgrade', 'Upgrade': 'HTTP/2.0'});
     if (response.status !== 200) {
       console.log(jsonData)
       return
@@ -83,37 +83,44 @@ export function NewsPageTemplate({ title, subtitle, featuredImage, body }) {
   }
 
   return <React.Fragment>
+  <div className="container">
     <div className="Divider"/>
     <div className="StockCards">
       <div className="StockCard">
-      {blkData && blkData['Global Quote'] && <StockCard company={blkData['Global Quote']['01. symbol']} 
-                                                            price={blkData['Global Quote']['05. price']}
-                                                            change={blkData['Global Quote']['10. change percent']}/>}
+      {blkData && blkData['Global Quote'] && 
+      <StockCard company={blkData['Global Quote']['01. symbol']} 
+        price={blkData['Global Quote']['05. price']}
+        change={blkData['Global Quote']['10. change percent']}/>}
       </div>
       <div classname="StockCard">
-      {tslaData && tslaData['Global Quote'] && <StockCard company={tslaData['Global Quote']['01. symbol']}
-                                                            price={tslaData['Global Quote']['05. price']}
-                                                            change={tslaData['Global Quote']['10. change percent']}/>}
+      {tslaData && tslaData['Global Quote'] && 
+      <StockCard company={tslaData['Global Quote']['01. symbol']}
+      price={tslaData['Global Quote']['05. price']}
+      change={tslaData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
-      {gmData && gmData['Global Quote'] && <StockCard company={gmData['Global Quote']['01. symbol']} 
-                                                            price={gmData['Global Quote']['05. price']}
-                                                            change={gmData['Global Quote']['10. change percent']}/>}
+      {gmData && gmData['Global Quote'] && 
+      <StockCard company={gmData['Global Quote']['01. symbol']} 
+        price={gmData['Global Quote']['05. price']}
+        change={gmData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
-      {fordData && fordData['Global Quote'] && <StockCard company={fordData['Global Quote']['01. symbol']} 
-                                                            price={fordData['Global Quote']['05. price']}
-                                                            change={fordData['Global Quote']['10. change percent']}/>}
+      {fordData && fordData['Global Quote'] && 
+      <StockCard company={fordData['Global Quote']['01. symbol']} 
+        price={fordData['Global Quote']['05. price']}
+        change={fordData['Global Quote']['10. change percent']}/>}
       </div>
       <div className="StockCard">
-      {qsData && qsData['Global Quote'] && <StockCard company={qsData['Global Quote']['01. symbol']} 
-                                                            price={qsData['Global Quote']['05. price']}
-                                                            change={qsData['Global Quote']['10. change percent']}/>}
+      {qsData && qsData['Global Quote'] && 
+      <StockCard company={qsData['Global Quote']['01. symbol']} 
+        price={qsData['Global Quote']['05. price']}
+        change={qsData['Global Quote']['10. change percent']}/>}
       </div>
     </div>
     {userData.articles && userData.articles.map(article => {
       return <NewsPostCard key={article.title} {...article}/>})}
     {!userData.articles && <p>Loading...</p>}
+    </div>
   </React.Fragment>
 
 }

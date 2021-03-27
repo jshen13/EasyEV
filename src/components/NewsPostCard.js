@@ -1,37 +1,82 @@
-import React from 'react'
+import React, {useState, useEffect}  from 'react'
 import { Link } from 'gatsby'
 
 import Image from './Image'
-import './PostCard.css'
+import './NewsPostCard.css'
 
-const NewsPostCard = ({
+
+function convertDate(date) {
+  let d = new Date(date);
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
+
+}
+
+function getSentimentScore(magnitude, score) {
+  return Math.round((magnitude * score * 10)* 100) / 100
+}
+
+export default function NewsPostCard({
   image,
   title,
   author,
   url,
   description,
+  content,
   publishedAt,
   categories = [],
   className = '',
   ...props
-}) => (
-  <Link to={url} className="PostCard">
-    {image && (
+}) {
+  const [sentimentData, setSentimentData] = useState({});
+  useEffect(() => {
+    getSentiment(content);
+  }, []);
+
+  const getSentiment = async(content) => {
+    let data = {
+       "document": {
+         "type": "PLAIN_TEXT",
+         "content": content         
+       },
+       "encodingType": 'UTF16'
+    }
+    const response = await fetch('https://language.googleapis.com/v1beta2/documents:analyzeSentiment?key=AIzaSyDBs2qSiOC6G1v_gIjs6An_Pbo9rzT9K5Y', {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    if (response.status !== 200) {
+      console.log('Error. Status Code: ' + response.status);
+      return
+    }
+    const jsonData = await response.json();
+    setSentimentData(jsonData);
+  }
+
+
+  return (<Link to={url} className="PostCard">
+  <div className="NewsCard--Row">
+  {image && (
       <div className="PostCard--Image relative">
         <Image background src={image} alt={title} />
       </div>
     )}
     <div className="PostCard--Content">
       {title && <h3 className="PostCard--Title">{title}</h3>}
-      <div className="PostCard--Category">
-        {categories && categories.map(cat => cat.category).join(', ')}
+      <div className="NewsCard--MetaData">
+{publishedAt && <div className="PostCard--Date">{convertDate(publishedAt)}</div>}
       </div>
-      {author && <div className="PostCard--Author">{author}</div>}
-      {publishedAt && <div className="PostCard--Date">{publishedAt}</div>}
+      {/* {author && <div className="PostCard--Author">{author}</div>} */}
+      
       {/* {description && <div className="PostCard--Date">${author}</div>} */}
       {description && <div className="PostCard--Excerpt">{description }</div>}
-    </div>
-  </Link>
-)
 
-export default NewsPostCard
+      {sentimentData && sentimentData.documentSentiment && getSentimentScore(sentimentData.documentSentiment.magnitude, sentimentData.documentSentiment.score)}
+    </div>
+  
+  </div>
+    
+  </Link>)
+}
+
+// export default NewsPostCard
