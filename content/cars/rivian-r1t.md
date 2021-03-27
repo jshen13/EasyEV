@@ -7,6 +7,7 @@ price: 67500
 range: 300
 acceleration: 3
 launch: Late 2021 
+type: truck
 featuredImage: >-
   https://www.cnet.com/a/img/euHmcba-cRbBD3VQegSKs_MG-dE=/940x0/2018/11/21/a502f3f1-2a07-4f3c-966a-3ad7b3d6134e/rivian-r1t-11.jpg
 link: https://rivian.com/r1t

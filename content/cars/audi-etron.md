@@ -7,6 +7,9 @@ price: 69995
 range: 222
 acceleration: 5.5
 top_speed: 124
+mpge: 78
+safetyRating: 5
+type: Crossover Sedan
 featuredImage: >-
   https://media.ed.edmunds-media.com/audi/e-tron/2021/oem/2021_audi_e-tron_4dr-suv_prestige-quattro_fq_oem_2_1600.jpg
 link: https://www.audiusa.com/us/web/en/models/e-tron/e-tron/2021/overview.html

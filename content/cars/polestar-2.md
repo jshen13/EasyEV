@@ -7,6 +7,9 @@ price: 59900
 range: 233
 acceleration: 4.7
 top_speed: 124
+mpge: 92
+type: Liftback
+safetyRating: 5
 featuredImage: >-
   https://i.insider.com/5f36af5fe89ebf001f04496b?width=1136&format=jpeg
 link: https://www.polestar.com/us/polestar-2/

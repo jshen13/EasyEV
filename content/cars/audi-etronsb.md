@@ -7,6 +7,9 @@ price: 69100
 range: 222
 acceleration: 5.1
 top_speed: 118
+mpge: 77
+type: Crossover Sedan
+safetyRating: 5
 featuredImage: >-
   https://www.motortrend.com/uploads/sites/5/2019/11/2020-Audi-E-Tron-Sportback-11.jpg
 link: https://www.audiusa.com/us/web/en/models/e-tron/e-tron-sportback/2021/overview.html

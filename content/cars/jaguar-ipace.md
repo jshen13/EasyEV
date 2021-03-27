@@ -7,6 +7,9 @@ price: 71000
 range: 234
 acceleration: 4.5
 top_speed: 124
+mpge: 76
+type: SUV
+safetyRating: 5
 featuredImage: >-
   https://cdn.motor1.com/images/mgl/qvVZR/s1/jaguar-i-pace-lo-show-di-presentazione-dalle-19-del-1-marzo.jpg
 link: https://www.jaguar.com/jaguar-range/i-pace/index.html

@@ -7,7 +7,7 @@ price: 119990
 range: 390
 acceleration: 1.99
 top_speed: 200
-launch: 2021-2022
+type: Liftback Sedan
 featuredImage: >-
   https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
 link: https://www.tesla.com/models

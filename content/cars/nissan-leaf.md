@@ -7,6 +7,9 @@ price: 36550
 range: 226
 acceleration: 7.9
 top_speed: 90
+mpge: 111
+type: Hatchback
+safetyRating: 5
 featuredImage: >-
   https://media.drivingelectric.com/image/private/s--F0iDAUiU--/v1612195051/drivingelectric/2021-01/LEAF10SV-018.jpg
 link: https://www.nissanusa.com/vehicles/electric-cars/leaf.html

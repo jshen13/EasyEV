@@ -7,6 +7,9 @@ price: 105150
 range: 227
 acceleration: 3.8
 top_speed: 155
+mpge: 79
+type: Luxury Sports Sedan
+safetyRating: 5
 featuredImage: >-
   https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2019/12/s19_6481_fine.jpg?quality=100&strip=all
 link: https://www.porsche.com/usa/models/taycan/taycan-models/taycan-4s/

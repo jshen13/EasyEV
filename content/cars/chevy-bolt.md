@@ -7,6 +7,9 @@ price: 41700
 range: 259
 acceleration: 6.5
 top_speed: 140
+mpge: 118
+type: Subcompact Hatchback
+safetyRating: 5
 featuredImage: >-
   https://autonxt.net/wp-content/uploads/2021/02/2022-Chevrolet-Bolt-EUV11.jpg
 link: https://www.chevrolet.com/electric/bolt-evintcmp=brand-explore-mache
