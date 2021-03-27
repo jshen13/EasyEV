@@ -5,7 +5,7 @@ import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
 import GithubCorner from './GithubCorner'
-
+import logoICO from '../../static/favicon.ico'
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
 
@@ -57,8 +57,7 @@ export default ({ children, meta, title }) => {
               titleTemplate={`%s | ${siteTitle}`}
             >
               {title}
-              <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
-              <link rel="dns-prefetch" href="https://ucarecdn.com" />
+              <link rel="shortcut icon" href={logoICO} />
               {/* Add font link tags here */}
             </Helmet>
 
