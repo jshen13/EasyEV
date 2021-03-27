@@ -1,25 +1,25 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: Chevy Bolt
 status: Published
 date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
+price: 41700
+range: 259
+acceleration: 6.5
+top_speed: 140
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://autonxt.net/wp-content/uploads/2021/02/2022-Chevrolet-Bolt-EUV11.jpg
+link: https://www.chevrolet.com/electric/bolt-evintcmp=brand-explore-mache
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Chevy
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: Chevy Bolt
 
 
 ---

@@ -42,7 +42,8 @@ export const ExplorePage = ({
   posts = [],
   postCategories = [],
   enableSearch = true,
-  contentType
+  contentType,
+  searchParam
 }) => (
   <Location>
     {({ location }) => {
@@ -53,6 +54,10 @@ export const ExplorePage = ({
 
       let queryObj = location.search.replace('?', '')
       queryObj = qs.parse(queryObj)
+
+      if (searchParam) {
+        queryObj.s = searchParam;
+      }
 
       if (enableSearch && queryObj.s) {
         const searchTerm = queryObj.s.toLowerCase()
@@ -134,6 +139,7 @@ export const pageQuery = graphql`
         template
         subtitle
         featuredImage
+        searchParam
       }
     }
 

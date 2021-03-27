@@ -1,25 +1,25 @@
 ---
 template: SingleCar
-title: Tesla Model S Plaid
+title: Nissan Leaf
 status: Published
-date: '2018-05-26'
-price: 119990
-range: 390
-acceleration: 1.99
-top_speed: 200
+date: '2018-05-22'
+price: 36550
+range: 226
+acceleration: 7.9
+top_speed: 90
 featuredImage: >-
-  https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iv2BNtkJT6jQ/v0/1000x-1.jpg
-link: https://www.tesla.com/models
+  https://media.drivingelectric.com/image/private/s--F0iDAUiU--/v1612195051/drivingelectric/2021-01/LEAF10SV-018.jpg
+link: https://www.nissanusa.com/vehicles/electric-cars/leaf.html
 excerpt: >-
   This is placeholder text that our web designers put here to make sure words
   appear properly on your website. This text is going to be replaced once the
   website is completed. You are currently reading text that is written in
   English, not any other language.
 categories:
-  - category: Tesla
+  - category: Nissan
 meta:
   description: test meta description
-  title: Tesla Model S Plaid
+  title: Nissan Leaf
 
 
 ---
