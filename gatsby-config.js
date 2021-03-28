@@ -2,8 +2,8 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: 'Yellowcake',
-    siteUrl: 'https://yellowcake.netlify.com'
+    title: 'EasyEV',
+    siteUrl: 'https://xenodochial-hamilton-4bc904.netlify.app/'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,6 +14,15 @@ module.exports = {
         /*id: 'GTM-add_your_tag_here',*/
         id: 'GTM-P4RNF8D',
         includeInDevelopment: false
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-HDW7GPH5KS",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
       }
     },
     {
