@@ -73,7 +73,7 @@ export default function NewsPostCard({
   }
 
 
-  return (<Link to={url} className="PostCard">
+  return (<Link to={url} className="PostCard" target="__blank">
   <div className="NewsCard--Row">
   {image && (
       <div className="PostCard--Image relative">
