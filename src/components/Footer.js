@@ -11,7 +11,7 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          By Anderson Tsai and Jeffrey Shen (LA Hacks 2021)
+          By <a href="https://www.linkedin.com/in/andersontsai">Anderson Tsai</a> and <a href="https://www.linkedin.com/in/jshen13">Jeffrey Shen</a> (LA Hacks 2021)
         </span>
       </div>
     </footer>
